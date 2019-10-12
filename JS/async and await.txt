@@ -1,0 +1,6 @@
+async function printAll(){
+  await printString("A")
+  await printString("B")
+  await printString("C")
+}
+printAll()

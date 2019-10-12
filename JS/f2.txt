@@ -1,0 +1,11 @@
+function add (x, y) {
+  return x + y
+}
+
+const me = add
+const you = add
+const someoneElse = add
+
+me(2,3) // 5 - Press the button, run the machine.
+you(2,3) // 5 - Press the button, run the machine.
+someoneElse(2,3) // 5 - Press the button, run the machine.

@@ -1,0 +1,5 @@
+function add (x, y) {
+  return x + y
+}
+
+add(2,3) // 5 - Press the button, run the machine.

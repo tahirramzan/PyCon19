@@ -1,0 +1,6 @@
+function printAll(){
+  printString("A")
+  .then(() => printString("B"))
+  .then(() => printString("C"))
+}
+printAll()

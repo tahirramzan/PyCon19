@@ -1,0 +1,62 @@
+function addString(previous, current, callback){
+  setTimeout(
+    () => {
+      callback((previous + ' ' + current))
+    }, 
+    Math.floor(Math.random() * 100) + 1
+  )
+}
+
+function addAll(){
+  addString('', 'A', result => {
+    addString(result, 'B', result => {
+      addString(result, 'C', result => {
+       console.log(result) // Prints out " A B C"
+      })
+    })
+  })
+}
+addAll()
+
+function addString(previous, current){
+  return new Promise((resolve, reject) => {
+    setTimeout(
+      () => {
+        resolve(previous + ' ' + current)
+      }, 
+      Math.floor(Math.random() * 100) + 1
+    )
+  })
+}
+
+function addAll(){  
+  addString('', 'A')
+  .then(result => {
+    return addString(result, 'B')
+  })
+  .then(result => {
+    return addString(result, 'C')
+  })
+  .then(result => {
+    console.log(result) // Prints out " A B C"
+  })
+}
+addAll()
+
+function addAll(){  
+  addString('', 'A')
+  .then(result => addString(result, 'B'))
+  .then(result => addString(result, 'C'))
+  .then(result => {
+    console.log(result) // Prints out " A B C"
+  })
+}
+addAll()
+
+async function addAll(){
+  let toPrint = await addString('', 'A')
+  toPrint = await addString(toPrint, 'B')
+  toPrint = await addString(toPrint, 'C')
+  console.log(toPrint) // Prints out " A B C"
+}
+addAll()
