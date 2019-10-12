@@ -2,7 +2,7 @@
 ### Concurrency in Node.js vs Python Asyncio
 
 
-#### *(a workshop with)*
+##### *(a workshop with)*
 #### Tahir Ramzan
 * Android Students Club Facilitator 2015
 * Google Summer of Coder for CiviCRM in 2015
